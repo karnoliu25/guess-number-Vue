@@ -58,7 +58,7 @@
 
       <!-- 记录与规则 -->
       <div v-show="isRule" class="info-container">
-        <information-view @closeInfo="closeFn">
+        <information-view @closeInfo="closeFn" :needClear="false">
           <p class="text-xl font-bold mb-2">珠玑妙算：挑战你的数字推理能力！</p>
           <p class="text-lg text-left">
             这是一款经典的数字解谜游戏，规则简单却充满智慧考验。你需要猜出一个
@@ -71,7 +71,7 @@
         </information-view>
       </div>
       <div v-show="isRecord" class="record-container">
-        <information-view @closeInfo="closeFn">
+        <information-view @closeInfo="closeFn" :needClear="true">
           <p class="font-bold text-xl mb-4">历史记录</p>
           <ul>
             <!-- prettier ignore -->

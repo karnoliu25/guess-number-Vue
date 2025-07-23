@@ -18,6 +18,7 @@
           我知道了
         </button>
         <button
+          v-if="needClear"
           @click="clearBtn"
           class="py-2 px-4 mt-4 lg:py-1 lg:px-3 bg-blue-100 rounded-lg hover:bg-blue-200 lg:mt-2"
         >
@@ -31,6 +32,12 @@
 <script>
 import { useGameStore } from "@/stores/game";
 export default {
+  props: {
+    needClear: {
+      type: Boolean,
+      default: false,
+    },
+  },
   emits: ["closeInfo"],
   methods: {
     closeBtn() {
