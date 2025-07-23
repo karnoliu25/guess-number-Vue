@@ -1,12 +1,12 @@
 <template>
   <div
-    class="home-container h-screen w-screen flex flex-col justify-center items-center border border-black"
+    class="home-container flex flex-col h-screen justify-center items-center border border-black"
   >
     <header class="w-full">
       <header-bar @rule="ruleBtnFn" @record="recordBtnFn"></header-bar>
     </header>
     <main
-      class="w-full grow bg-blue-50 flex flex-col lg:justify-center items-center"
+      class="w-full flex-1 bg-blue-50 flex flex-col lg:justify-center items-center pb-20"
     >
       <display-box>
         <p
@@ -87,7 +87,7 @@
       </div>
     </main>
 
-    <footer class="w-full">
+    <footer class="w-full fixed bottom-0 left-0">
       <footer-bar></footer-bar>
     </footer>
   </div>
